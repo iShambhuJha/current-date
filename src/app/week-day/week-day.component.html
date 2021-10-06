@@ -1,0 +1,9 @@
+<div class="main-block">
+  <div class="row circles-row">
+    <span [ngClass]="day==weekDay[date.getDay()]?'circle-higlight':'circle'" *ngFor="let day of days();">
+      <span class="day">
+        {{ day | slice:0:3}}
+      </span>
+    </span>
+  </div>
+</div>
