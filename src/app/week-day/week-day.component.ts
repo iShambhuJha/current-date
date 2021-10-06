@@ -14,18 +14,17 @@ enum WeekDay {
   styleUrls: ['./week-day.component.css'],
 })
 export class WeekDayComponent implements OnInit {
-  weekDay = WeekDay;
-  // public days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  date: Date;
+  public weekDay = WeekDay;
+  public date: Date;
 
   constructor() {}
 
   ngOnInit(): void {
     this.date = new Date();
   }
+  // Return all week days
   days(): Array<string> {
     var keys = Object.keys(this.weekDay);
-    console.log(keys,'kkkk')
     return keys.slice(keys.length / 2);
   }
 }
